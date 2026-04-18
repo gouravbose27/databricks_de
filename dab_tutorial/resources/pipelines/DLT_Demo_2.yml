@@ -1,0 +1,16 @@
+resources:
+  pipelines:
+    pipeline_dlt_demo_2:
+      name: DLT_Demo_2
+      libraries:
+        - glob:
+            include: ../../src/DLT_Demo_2/transformations/**
+      schema: dlt_schema
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: databricksdemo
+      serverless: true
+      root_path: ../../src/DLT_Demo_2
+
